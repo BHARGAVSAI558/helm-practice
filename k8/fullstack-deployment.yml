@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: bhargavsai558/k8-pickle-backend:first  # <-- change this
+          image: bhargavsai558/kuber-backend:latest  # <-- change this
           ports:
             - containerPort: 2000
 ---
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: bhargavsai558/k8-pickle-frontend:first  # <-- change this
+          image: bhargavsai558/kuber-frontend:latest  # <-- change this
           ports:
             - containerPort: 80
 ---
