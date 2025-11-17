@@ -32,7 +32,7 @@ jobs:
           context: ./BACKEND
           file: ./BACKEND/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/helmp-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/helmp-backend:dbs
 
       # Step 5 — Build & Push Frontend Image
       - name: Build and Push Frontend Image
@@ -41,4 +41,4 @@ jobs:
           context: ./FRONTEND
           file: ./FRONTEND/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/helmp-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/helmp-frontend:dbs
