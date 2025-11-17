@@ -8,7 +8,7 @@ COPY .mvn/ .mvn
 COPY pom.xml .
 COPY src ./src
 
-# FIX → Add execute permission
+
 RUN chmod +x mvnw
 
 RUN ./mvnw clean package -DskipTests
@@ -19,6 +19,6 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
-EXPOSE 2000
+EXPOSE 2002
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
